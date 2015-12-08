@@ -1,0 +1,4 @@
+name: Javier Rivera is a Designer
+markdown: redcarpet
+highlighter: pygments # or rouge or null
+exclude: ["node_modules", "gulpfile.js", "package.json"]
