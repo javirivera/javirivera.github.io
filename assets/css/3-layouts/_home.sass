@@ -1,0 +1,105 @@
+.home-wrap
+	+box-sizing(border-box)
+	position: fixed
+	border: 30px solid black
+	height: 100vh
+	background-color: white
+	width: 100%
+	z-index: 2
+
+.flickity-viewport
+	height: 100vh
+
+.gallery
+	+box-sizing(border-box)
+	position: relative
+	z-index: 1
+	width: 100%
+	
+.gallery-cell
+	width: 100%
+
+.cell-wrap
+	top: 40vh
+	transform: translateY(-50%)
+	width: 230px
+	position: relative
+	margin: 0 auto
+
+.project-title
+	font-weight: 900
+	text-transform: uppercase
+	color: black
+	font-size: 42px
+	line-height: 1em
+
+.project-subline
+	padding: 0
+	font-weight: 500
+	color: grey
+	font-size: 16px
+
+.project-link
+	padding: 30px 0 0
+	position: absolute
+	font-weight: 500
+	color: black
+	font-size: 16px
+
+.flickity-prev-next-button
+	position: absolute
+	width: 16%
+	height: 80%
+	top: 40vh
+	border-radius: 0
+
+.flickity-page-dots 
+	display: none
+	
+.flickity-prev-next-button.previous, .previous:hover, .previous:active
+	+background(linear-gradient(to right, white, transparent))
+	left: 0
+
+.flickity-prev-next-button.next, .next:hover, .next:active
+	+background(linear-gradient(to left, white, transparent))
+	right: 0
+	
+
+.flickity-prev-next-button 
+	.arrow
+		fill: black
+
+.flickity-prev-next-button:disabled 
+  display: none
+
+//Tablet
+@media (min-width: $toast-breakpoint-small)
+	
+	.cell-wrap
+		width: 300px
+	
+	.project-title
+		font-size: 3.6em
+	
+	.project-subline
+		font-size: 21px
+	
+	.project-link
+		font-size: 18px
+
+
+//Desktop
+@media (min-width: $toast-breakpoint-medium)
+	
+	.cell-wrap
+		width: 500px
+	
+	.project-title
+		font-size: 6.5em
+	
+	.project-subline
+		font-size: 24px
+	
+	.project-link
+		padding: 60px 0 0
+		font-size: 18px
