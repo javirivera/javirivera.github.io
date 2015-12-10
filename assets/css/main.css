@@ -660,11 +660,19 @@ th {
   src: url("/assets/fonts/Montserrat/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-black-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-black-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-black-webfont.svg#Montserrat") format("svg"); }
 
 @font-face {
+<<<<<<< HEAD
   font-family: "Montserrat";
   font-weight: 700;
   font-style: normal;
   src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot");
   src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.svg#Montserrat") format("svg"); }
+=======
+  font-family: "MontserratB";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot");
+  src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.svg#MontserratB") format("svg"); }
+>>>>>>> 91fe91fb458a2ab2eada4b3538bd218971d0203f
 
 @font-face {
   font-family: "Montserrat";
