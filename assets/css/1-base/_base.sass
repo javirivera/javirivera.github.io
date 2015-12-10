@@ -13,7 +13,6 @@ h1, h2, h3, h4, h5, h6
   font-size: 68px
   line-height: 1.05
 
-
 .large, h2
   font-size: 42px
   line-height: 1.14
@@ -48,3 +47,27 @@ hr
   clear: both
   margin: 10px 0 30px
   height: 0
+	
+// Basic Links
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6
+	
+	a, a:link, a:visited, a:hover, a:focus, a:active
+		color: black
+		border-bottom: 8px solid #00eead
+
+a, a:link, a:visited, a:active
+	color: black
+	text-decoration: none
+	border-bottom: 8px solid #00eead
+	box-shadow: inset 0 -4px 0 #00eead
+	color: #555
+	background: transparent
+	+transition(all .2s ease-in)
+
+a:hover
+	color: #00eead
+	border-bottom: 0px solid transparent
+	box-shadow: inset 0 -4px 0 transparent
+	+transition(all .2s ease-in)
+	
