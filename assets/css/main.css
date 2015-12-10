@@ -652,6 +652,9 @@ th {
 .col--am {
   vertical-align: middle; }
 
+body {
+  font-family: Montserrat, sans-serif; }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #222; }
@@ -723,9 +726,6 @@ a:hover {
   box-shadow: inset 0 -4px 0 transparent;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
-
-body {
-  font-family: Montserrat; }
 
 .header {
   position: absolute;
