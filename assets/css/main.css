@@ -652,6 +652,34 @@ th {
 .col--am {
   vertical-align: middle; }
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat/montserrat-black-webfont.eot");
+  src: url("/assets/fonts/Montserrat/montserrat-black-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-black-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-black-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-black-webfont.svg#Montserrat") format("svg"); }
+
+@font-face {
+  font-family: "MontserratB";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot");
+  src: url("/assets/fonts/Montserrat/montserrat-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-bold-webfont.svg#MontserratB") format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat/montserrat-regular-webfont.eot");
+  src: url("/assets/fonts/Montserrat/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-regular-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-regular-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-regular-webfont.svg#Montserrat") format("svg"); }
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: normal;
+  src: url("/assets/fonts/Montserrat/montserrat-semibold-webfont.eot");
+  src: url("/assets/fonts/Montserrat/montserrat-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Montserrat/montserrat-semibold-webfont.woff") format("woff"), url("/assets/fonts/Montserrat/montserrat-semibold-webfont.ttf") format("truetype"), url("/assets/fonts/Montserrat/montserrat-semibold-webfont.svg#Montserrat") format("svg"); }
+
 body {
   font-family: Montserrat, sans-serif; }
 
@@ -837,7 +865,7 @@ a:hover {
 .flickity-prev-next-button .arrow {
   fill: black; }
 
-.flickity-prev-next-button:disabled {
+.flickity-prev-next-button {
   display: none; }
 
 @media (min-width: 480px) {
@@ -867,4 +895,6 @@ a:hover {
     height: 100vh;
     background-color: white;
     width: 100%;
-    z-index: 2; } }
+    z-index: 2; }
+  .flickity-prev-next-button {
+    display: initial; } }
