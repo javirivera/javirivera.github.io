@@ -2,3 +2,14 @@ name: Javier Rivera is a Designer
 markdown: redcarpet
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+author: Javier Rivera
+author_email: javier@javirivera.com
+
+url: http://javirivera.com
+
+permalink: pretty
+
+collections:
+- posts
+- projects
