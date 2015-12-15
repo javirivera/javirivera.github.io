@@ -21,7 +21,7 @@ $(function(){
   var $page = $('#main'),
       options = {
         debug: true,
-        prefetch: false,
+        prefetch: true,
         cacheLength: 0,
         onStart: {
           duration: 250, // Duration of our animation
