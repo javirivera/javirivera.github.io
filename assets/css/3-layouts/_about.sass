@@ -1,0 +1,34 @@
+.panel
+	.header-center
+		.logo
+			color: white
+		
+		a, a:link, a:visited, a:active
+			text-decoration: none
+			border-bottom: 8px solid #00eead
+			box-shadow: inset 0 -4px 0 #00eead
+			color: white
+			background: transparent
+			+transition(all .2s ease-in)	
+			padding: 0
+
+		a:hover
+			color: #00eead
+			border-bottom: 0px solid transparent
+			box-shadow: inset 0 -4px 0 transparent
+			+transition(all .2s ease-in)
+		
+.panel
+	+box-sizing(border-box)
+	position: absolute
+	background-color: black
+	height: 100%
+	width: 100%
+	z-index: 2
+
+	.about-head
+		position: fixed
+		z-index: 4
+		right: 0
+	
+		
