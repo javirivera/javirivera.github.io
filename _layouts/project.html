@@ -3,22 +3,14 @@
 {% include head.html %}
     <body>
  <div id="main" class="m_scene site-wrap">
-	<div class="header">
-	   	<div class="header-center">
-	    	<h1 class="logo">javier rivera</h1>
-				<a href="#"><span class="logo-subline">
-	     	is a designer.
-	     	</span></a>
-	    </div>
-	</div>
-
+{% include header.html %}
 
 	<div class="home-wrap"></div>
 
 <div id="project-panel" class="project-panel scene_element scene_element--fadeinup">
 	<div class="row">
-	<div class="project-head col col--2-of-12 col--push-10-of-12">
-<a class="img-link" href="/index.html"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt=""></a>
+	<div class="col col--2-of-12 col--push-10-of-12">
+<a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
 	</div>
 	
 		
@@ -30,32 +22,26 @@
 
 	
 <div class="project-footer col col--12-of-12">
-<div class="next-project col col--3-of-12 col--push-2-of-12">Next Project</div>
-<div class="next-project-title col col--4-of-12 col--push-1-of-12">A-Asanas</div>
 
-{% if page.next_in_category != nil %}
-	<a href="{{page.next_in_category.url}}" class="next-link">Older Post</a>
+
+	<div class="next-previous-project col col--1-of-2">{% if page.next_in_category != nil %}
+<a href="{{page.next_in_category.url}}" class="shift-left next-link">Older Project</a>
 {% endif %}
+	
+	</div>
+
+<div class="next-previous-project col col--1-of-2">
 {% if page.previous_in_category != nil %}
-	<a href="{{page.previous_in_category.url}}" class="previous-link">Newer Post</a>
+<a href="{{page.previous_in_category.url}}" class="shift-right previous-link">Newer Project</a>
 {% endif %}
+</div>
+
 
 </div>
 
 </div>
 	
 </div>
-<!--FOOTER-->
-      <div class="footer">
-      	<div class="footer-center">
-      		<div class="footer-menu">
-      			<span>
-      				Blog
-						</span>
-      		</div>
-      	</div>	
-      	</div>
-			</div>
 {% include footer.html %}
     </body>
 </html>

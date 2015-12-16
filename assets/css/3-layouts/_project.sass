@@ -26,15 +26,16 @@
 	z-index: 4
 	color: white
 
-.next-project, .next-project-title
+.next-previous-project
 	position: relative
 	top: 50%
-
-.next-project
 	font-size: 1.6em
 
-.next-project-title
-	font-size: 2.4em
+	a, a:hover, a:active, a:visited
+		color: white
+		text-decoration: none
+		border-bottom: 0px solid #00eead
+		box-shadow: inset 0 0px 0 #00eead
 
 .project-content
 	padding: 20px
@@ -66,51 +67,67 @@
 			list-style: none
 		margin 0
 		padding: 0
+	
+.shift-right
+	position: absolute
+	right: 120px
+
+.shift-left
+	position: absolute
+	left: 120px
 
 	
-@keyframes fadeIn
-  0%
-    opacity: 0
-  100%
-    opacity: 1
-
-
-@keyframes fadeInUp
-  0%
-    opacity: 0
-    transform: translate3d(0, 100%, 0)
-  100%
-    opacity: 1
-    transform: none
-
-
-@keyframes fadeInRight
-  0%
-    opacity: 0
-    transform: translate3d(100%, 0, 0)
-  100%
-    opacity: 1
-    transform: none
+//@keyframes fadeIn
+//  0%
+//    opacity: 0
+//  100%
+//    opacity: 1
+//
+//
+//@keyframes fadeInUp
+//  0%
+//    opacity: 0
+//    transform: translate3d(0, 100%, 0)
+//  100%
+//    opacity: 1
+//    transform: none
+//
+//
+//@keyframes fadeInRight
+//  0%
+//    opacity: 0
+//    transform: translate3d(100%, 0, 0)
+//  100%
+//    opacity: 1
+//    transform: none
 	
 .m_scene
 	
 	.scene_element
-	  animation-duration: .25s
-	  transition-timing-function: ease-in-out
+	  animation-duration: .5s
+	  transition-timing-function: ease-in
 	  animation-fill-mode: both
 	
 	.scene_element--fadein
 	  animation-name: fadeIn
 	
 	.scene_element--fadeinup
-		animation-name: fadeInUp
+		animation-name: zoomInUp
 
 	.scene_element--fadeinright
 		animation-name: fadeInRight
 	
+	.scene_element--slidedown
+		animation-name: fadeInDownBig
+	
 	&.is-exiting
 		.scene_element
 			animation-direction: alternate-reverse
+	
+body
+	animation-duration: 2s
+	transition-timing-function: ease-in
+	animation-name: fadeIn
 
 //Tablet
 @media (min-width: $toast-breakpoint-medium)
