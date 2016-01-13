@@ -1,4 +1,5 @@
 .panel
+	color: white
 	.header-center
 		.logo
 			color: white
@@ -20,15 +21,27 @@
 		
 .panel
 	+box-sizing(border-box)
-	position: absolute
+	position: relative
 	background-color: black
 	height: 100%
 	width: 100%
-	z-index: 2
+	z-index: 3
+	padding: 0 20px
 
 	.about-head
 		position: fixed
-		z-index: 4
+		z-index: 6
 		right: 0
 	
+		
+	.about-content
+		width: 100%
+		max-width: 1200px
+		margin: 0 auto
+		padding-top: 80px
+		height: 100%
+		
+.panel
+  h1, h2, h3, h4, h5, h6, p
+    color: white
 		

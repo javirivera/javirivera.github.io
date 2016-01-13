@@ -6,6 +6,7 @@ var elem = document.querySelector('.gallery');
 var flkty = new Flickity( elem, {
  	// options
 	wrapAround: true,
+	autoPlay: 1800,
 	arrowShape: {
    	x0: 10,
  		x1: 60, y1: 50,
@@ -22,7 +23,8 @@ $(function(){
       options = {
         debug: true,
         prefetch: true,
-        cacheLength: 0,
+        cacheLength: 1,
+        scroll: false,
         onStart: {
           duration: 500, // Duration of our animation
           render: function ($container) {
@@ -45,16 +47,17 @@ $(function(){
 				onAfter: function($container, $newContent) {
 					var elem = document.querySelector('.gallery');
 					var flkty = new Flickity( elem, {
- 					// options
+					// options
 					wrapAround: true,
+					autoPlay: 1800,
 					arrowShape: {
-  				 	x0: 10,
- 						x1: 60, y1: 50,
- 						x2: 75, y2: 35,
- 						x3: 40
+						x0: 10,
+						x1: 60, y1: 50,
+						x2: 75, y2: 35,
+						x3: 40
 					},
-	 				setGallerySize: false,
-	 				cellSelector: '.gallery-cell'
+					setGallerySize: false,
+					cellSelector: '.gallery-cell'
 				});
 
 				}
