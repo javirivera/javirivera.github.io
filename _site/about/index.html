@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Javier Rivera is a designer.</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/assets/css/flickity.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ * 
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+    <body>
+ <div id="main" class="m_scene about-wrap">
+ 
+<div class="home-wrap"></div>
+
+<div id="about-panel" class="panel scene_element scene_element--slidedown">
+
+<div class="row">
+	<div class="about-head col col--2-of-12">
+		<a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit-white.svg" alt=""></a>
+	</div>
+		<div class="header col col--1-of-1">
+	   	<div class="header-center scene_element">
+	    	<h1 class="logo">javier rivera</h1>
+				<a href="/"><span class="logo-subline">
+	     	is a designer.
+	     	</span></a>
+	    </div>
+	</div>
+</div>
+
+<div id="about-content" class="row about-content">
+    <div class="col col--2-of-4">
+        <h2>I'm a passionate designer interested by the overlaping of identity, user experience, and technology.</h2>
+         <p>Hello there, my name is Javier Rivera. I live in Puerto Rico and regularly find my way to Boston and New York City.</p>
+			<p>I graduated on June 2013 from the Polytechnic University of Puerto Rico with a Bachelor's degree in Architecture. During my time as an architecture student I got interested in graphic design, photography and identity design to compliment my education. Eager to learn more while doing, I started offering services in these disciplines for individuals, institutions and businesses while in college. After graduation I continued to freelance as a designer, and here I am now.</p>
+<p>
+I'm always on the lookout for new opportunities to challenge myself, whether it be partnering with individual clients or with a team in which I can be a valuable asset while exploring my curiosity as a designer.</p
+	<p>Think I can help you, or form part of your team?</p>
+<p>Don't hesitate to contact me!</p>
+        <hr>
+        <ul class="social-about">
+        	<li><h5>SOCIAL MEDIA</h5></li>
+        	<li><a href="https://www.behance.net/javirivera">behance</a></li>
+        	<li><a href="https://twitter.com/jayvier">twitter</a></li>
+        	<li><a href="https://github.com/javirivera">github</a></li>
+        	<li><a href="https://www.instagram.com/javirivera/">instagram</a></li>
+        </ul>
+    </div>
+</div>
+        		
+
+</div>
+        		
+			     <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center">
+      		<div class="footer-menu">
+      			<span>
+<!--      				Blog-->
+						</span>
+      		</div>
+      	</div>	
+      	</div>
+			</div>
+			
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/flickity.pkgd.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+	
+
+</div>
+    </body>
+</html>
+
+

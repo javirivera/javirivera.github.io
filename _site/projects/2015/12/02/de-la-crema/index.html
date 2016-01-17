@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>De la Crema by Javier Rivera</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/assets/css/flickity.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ * 
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+    <body>
+ <div id="main" class="m_scene site-wrap">
+
+<div class="project-wrap">
+
+	<div class="header">
+	   	<div class="header-center scene_element">
+	    	<h1 class="logo">javier rivera</h1>
+				<a href="/about"><span class="logo-subline">
+	     	is a designer.
+	     	</span></a>
+	    </div>
+	</div>
+
+
+<div id="project-panel" class="project-panel scene_element scene_element--fadeinup">
+	<div class="row">
+	<div class="col col--2-of-12 col--push-10-of-12">
+<a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
+	</div>
+	
+		
+<div class="project-content row">
+
+	<div class="project-page-header col col--1-of-2 col--centered">
+<img class="img-responsive" src="/assets/images/Projects/de-la-crema/logo-dlc.png" alt="Logo de la Crema">
+		
+</div>
+
+<div class="col col--1-of-2 col--push-1-of-2">
+<h1 class="project-page-title">De la Crema</h1>
+		
+</div>
+
+<div class="col col--1-of-2 col--push-1-of-2">
+<p class="project-page-subline">Quality milk based products <br>
+from the best of the cream.</p>
+		
+</div>
+
+
+<div class="project-sub-images">
+	
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/de-la-crema/bag.png" alt="bag">
+
+		</div>
+
+
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/de-la-crema/sample.png" alt="Logo de la Crema">
+
+		</div>
+
+
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/de-la-crema/clandestino.png" alt="Logo de la Crema">
+		
+</div>
+
+</div>
+
+
+<div class=" project-details col col--1-of-6">
+<span class="small"><strong>Project Types</strong></span>
+<br>
+<span class="small">
+<ul>
+	<li>branding</li>
+	<li>product packaging</li>
+</ul></span>
+<span class="small"><strong>Year</strong></span>
+<br>
+<span class="small">
+<ul>
+	<li>2015</li>
+</ul></span>
+		
+</div>
+
+<div class="project-details col col--1-of-6">
+<span class="small"><strong>Client</strong></span>
+<span class="small">
+<ul>
+	<li>Hatillo Novalact Inc.</li>
+</ul></span>
+</div>
+
+<div class="col col--3-of-8 col--push-1-of-6">
+<p>I was approached by the Torrados from Hatillo Novalact Inc. because they had started developing a line of quality milk derivatives and they needed to settle on a name and develop the brand identity. This caught my attention as it would be a great opportunity to work with the conception of a complete branding system as well as develop a new brand from scratch. Naturally, I said yes.</p>
+	
+<p>We crafted a design brief, discussed the competition, market, desired clients, brand tone and a series of precedents of what we thought the brand could be and should not be like. But we still hadn’t settled on a name.</p>
+
+<h2>The Name</h2>
+<p>We sent  a couple of potential names for the products to a number of close friends. De La Crema, stood out as the favorite. The name speaks of the quality they strive for with their products, as the cream is the best part of the milk. Also is used as a common saying to express the unique quality of an individual: “crème de la crème” which literally translates to cream of the cream.</p>
+	
+<h2>The Mark</h2>
+<p>Two options were presented to the Torrados at first. None of which sparked real interest from them. I decided to go a totally different route with a more caligraphic approach to the brand, using type that flowed like cream. Simple and robust, the use black and white was there from the start.</p>
+		
+</div>
+
+
+<div class="project-row col col--8-of-12 col--centered">
+	<img src="/assets/images/Projects/de-la-crema/concepts-dlc.png" alt="logo concepts" class="img-responsive">
+</div>
+
+
+<div class="project-row col col--1-of-1 col--centered">
+	<img src="/assets/images/Projects/de-la-crema/logo-dlc-bg.png" alt="logo concepts" class="img-responsive">
+</div>
+
+
+<div class="col col--3-of-8 col--push-1-of-2">
+<h2>The Product Packaging</h2>
+<p>Three products needed a package and label designed. A Clandestino —clandestine— cheese, a guayaba greek yogurt, and a coconut greek yogurt.</p>
+<p>The concept for the product packaging line came along with some experimentation with ink, watercolors, and oil paint. Using the flowing qualities of the paints and inks I created backgrounds for the packages and labels. A certain sloppiness was desired, balancing the image of a quality product coming from a very small company.</p>
+</div>
+
+
+<div class="project-row col col--1-of-1 col--centered">
+	<img src="/assets/images/Projects/de-la-crema/Clandestino-01.png" alt="logo concepts" class="img-responsive">
+</div>
+
+	
+</div>
+
+	
+<div class="project-footer col col--12-of-12">
+
+
+	<div class="next-previous-project col col--1-of-2">
+<a href="/projects/2015/12/01/a-sanas/" class="shift-left next-link">Older Project</a>
+
+	
+	</div>
+
+<div class="next-previous-project col col--1-of-2">
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+     <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center">
+      		<div class="footer-menu">
+      			<span>
+<!--      				Blog-->
+						</span>
+      		</div>
+      	</div>	
+      	</div>
+			</div>
+			
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/flickity.pkgd.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+	
+
+</div>
+
+    </body>
+</html>

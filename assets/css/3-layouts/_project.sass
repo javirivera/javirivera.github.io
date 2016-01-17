@@ -70,7 +70,7 @@
 	margin: 0
 
 .project-sub-images, .project-row
-	padding-top: 60px
+	padding: 60px 0
 
 .project-details
 	margin: 0
@@ -88,6 +88,9 @@
 .shift-left
 	position: absolute
 	left: 120px
+
+.grid-img
+	padding-bottom: 20px
 
 	
 //@keyframes fadeIn
@@ -143,22 +146,22 @@ body
 	animation-name: fadeIn
 
 //Tablet
+//@media (max-width: $toast-breakpoint-medium)
+
+
+//Desktop
 @media (min-width: $toast-breakpoint-medium)
 	.project-panel
+		margin: 200px auto
 		border: 30px solid black
 		width: 90%
 		
 	.project-wrap
 		border: 30px solid black
-		
+	
 	.ui-exit
 		width: 60px
 	
 	.project-page-header
 		padding: 120px 20px
-	
-
-
-
-//Desktop
 
