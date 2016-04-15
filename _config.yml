@@ -8,8 +8,17 @@ author_email: javier@javirivera.com
 
 url: http://javirivera.com
 
+baseurl: ''
+
 permalink: pretty
 
 collections:
 - posts
 - projects
+
+gems: [jekyll-paginate, jekyll-paginate-category]
+
+paginate: 5
+
+sass:
+    sass_dir: /assets/_sass

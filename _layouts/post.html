@@ -6,31 +6,38 @@
 
 <div class="project-wrap">
 
-{% include header.html %}
+    <div class="header">
+        <div class="header-center scene_element">
+          <h1 class="logo">javier rivera</h1>
+          <a href="/about"><span class="logo-subline">
+          also writes about design.
+          </span></a>
+        </div>
+    </div>
 
 <div id="project-panel" class="project-panel scene_element scene_element--fadeinup">
 	<div class="row">
 	<div class="col col--2-of-12 col--push-10-of-12">
-<a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
+<a class="img-link" href="/blog/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
 	</div>
-	
-		
+
+
 <div class="project-content row">
-<div class="blog-content col col--2-of-3 col--centered">
+<div class="blog-content col col--3-of-4 col--centered">
 
 	{{ content }}
-	
+
 </div>
 </div>
 
-	
+
 <div class="project-footer col col--12-of-12">
 
 
 	<div class="next-previous-project col col--1-of-2">{% if page.next_in_category != nil %}
 <a href="{{page.next_in_category.url}}" class="shift-left next-link">Older Post</a>
 {% endif %}
-	
+
 	</div>
 
 <div class="next-previous-project col col--1-of-2">
