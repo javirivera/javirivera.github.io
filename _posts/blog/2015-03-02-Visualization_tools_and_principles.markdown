@@ -8,6 +8,8 @@ comments: true
 description: Before submerging ourselves into design principles about composition, color, typography, etc., let's explore visualization.
 ---
 
+#Visualization tools and principles
+
 ![Visualization](/assets/images/blog/2015-03-02-Visualization_tools_and_principles/visualization-01.png)
 
 Before submerging ourselves into design principles about composition, color, typography, etc., let's explore visualization. When we design, there are a variety of tools that help us give meat to our thoughts. Be it sketching, high fidelity mockups, scale models or working prototypes, these are tools that help us establish a direct connection between our brain and the physical world. These serve as strategies that help us communicate our thoughts to the world. But more importantly, they help us understand and develop our ideas through the process of creating each one.

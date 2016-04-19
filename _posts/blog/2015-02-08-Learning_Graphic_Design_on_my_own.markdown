@@ -8,6 +8,8 @@ comments: true
 description: I want to advance my knowledge in graphic design on my own.
 ---
 
+#Learning Graphic Design on my own
+
 ![BLOG](/assets/images/blog/2015-02-16-Learning_Graphic_Design_on_my_own/blog.png)
 
 I want to advance my knowledge in graphic design. The most obvious route is sign up for a master's degree. However, none of the master's programs that I can afford satisfy me, and the ones I'm interested in are generally too expensive. Besides, there is a plethora of online/offline resources that anyone can integrate in self directed studies. There are podcasts, books, websites, blogs, youTube, etc. With this in mind, I've decided to learn graphic design on my own.
@@ -42,10 +44,6 @@ These are some starting guidelines:
    * Include links to articles, books, or websites that are relevant to the lesson.
 
 This blog will be a great challenge. I mean, my writing skills are a little rusty, so the tone and  workflow will likely transform itself, hopefully for the best, throughout time. I can’t wait to share my process with any readers that stumble upon my blog.
-
-<hr>
-
->> ####Next post: [Design literacy & developing design thinking skills](/graphic/design/education/Design_literacy_&_developing_design_thinking_skills/)
 
 <hr>
 

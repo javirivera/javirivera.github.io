@@ -8,6 +8,8 @@ comments: true
 description: Here’s an idea, Everyone should understand design.
 ---
 
+#Design literacy & developing design thinking skills
+
 ![TO DESIGN?](/assets/images/blog/2015-02-16-Design_literacy_&_developing_design_thinking_skills/todesign-01.png)
 
 Here’s an idea: "Everyone should understand design".
@@ -54,7 +56,7 @@ I know there's a LOT more to be said about these topics, but I'm trying to keep 
 
 So, I'm interested, how does Design Thinking inform your creative process? Let me know in the comments section below.
 
->> ###Next post: [Visualization tools and principles](/graphic/design/education/Visualization_tools_and_principles/)
+<hr>
 
 I'm on schedule with my posts! To keep informed about new content, you can [subscribe](http://eepurl.com/9xdEz) to receive a notification whenever I upload a new article. I also invite you to share my blog with anyone that might be interested in the content. Thanks for reading!
 

@@ -8,6 +8,8 @@ comments: true
 description: Beautifully functional design is created with an understanding of fundamental concepts of visual language. A good grip of these fundamentals is basic to communicate and interpret ideas visually to our audience and fellow colleagues.
 ---
 
+#Basic Elements of Design: Dimensions
+
 ![Visualization](/assets/images/blog/2015-04-27-Basic_Elements_of_Design-Dimensions/hero-elements-01.png)
 
 Beautifully functional design is created with an understanding of fundamental concepts of visual language. A good grip of these fundamentals is basic to communicate and interpret ideas visually to our audience and fellow colleagues. There are many primordial elements, but let's focus on introducing a few for this post. Let's get acquainted with these basic topics, and see how they can influence our design process.
@@ -52,7 +54,7 @@ Volumes are empty space defined by points, lines and planes that will form three
 
 You might be thinking this list is incomplete or different from other element lists we've probably read before in other sources. Truth is, there isn't any definitive list of basic design elements, and I'm not trying to create one. Each design field will focus on their own interpretation of what the basics are, though they may relate they will not always be the same. As they come up in the next posts I will be discussing them in depth.
 
->> ###Next post: [Next post: Basic Elements of Design: Form](http://eepurl.com/9xdEz)
+<hr>
 
 It's been a while since I updated the blog with new content. I'm getting back on the wagon and will make an effort to post more often. You can [subscribe](http://eepurl.com/9xdEz) to receive an e-mail notification whenever I upload a new article. You could also share my blog if you think it's worth a space on your social media profiles. Until next time, and as always, thanks for reading!
 
