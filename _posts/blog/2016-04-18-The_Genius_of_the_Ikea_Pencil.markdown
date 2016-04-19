@@ -6,6 +6,7 @@ date:   2016-04-18 12:00:00
 categories: blog
 comments: true
 description: The Ikea pencil seems like a cheap showroom giveaway, but I think it’s a genius brand move.
+image: /assets/images/blog/2016-04-18-The_Genius_of_the_Ikea_Pencil/ikeapencils.jpeg
 ---
 
 # The Genius of the Ikea Pencil
