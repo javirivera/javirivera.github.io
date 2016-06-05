@@ -39,7 +39,7 @@ Take one home. Hell, take 5, who cares, they’re free. If you feel guilty you c
 
 ![Image via Ikea Singapore Facebook](/assets/images/blog/2016-04-18-The_Genius_of_the_Ikea_Pencil/ikea-sp-fb.png)
 
-Ikea orders millions of pencils yearly and distributes them to their clients for free. These pencils are an important part of their brand and user experience, I don’t know what will. And once in a while, the genius pays off. On September 2015, Apple announced it’s new “Pencil” device. Soon after, Ikea Singapur put out an advertisement on their Facebook page. They boasted about it’s writing utensils strongest qualities: familiarity and gratuity. A great response, all thanks to the Ikea pencil.
+Ikea orders millions of pencils yearly and distributes them to their clients for free. These pencils are an important part of their brand and user experience. And once in a while, the genius pays off. On September 2015, Apple announced it’s new “Pencil” device. Soon after, Ikea Singapur put out an advertisement on their Facebook page. They boasted about it’s writing utensils strongest qualities: familiarity and gratuity. A great response, all thanks to the Ikea pencil.
 
 ![Image via Florian Alexander Fuchs](/assets/images/blog/2016-04-18-The_Genius_of_the_Ikea_Pencil/seat-ikea.png)
 
