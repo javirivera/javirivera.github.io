@@ -4,6 +4,7 @@ var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
 var jade        = require('gulp-jade');
+var watch       = require('gulp-watch');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -41,9 +42,9 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('assets/css/main.sass')
+    return gulp.src('assets/_sass/main.sass')
         .pipe(sass({
-            includePaths: ['css'],
+            includePaths: ['sass','scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
@@ -54,14 +55,14 @@ gulp.task('sass', function () {
 
 /**
  * Compile Jade and watch for changes
- * 
+ *
  */
 
 gulp.task('jade', function(){
   return gulp.src('*.jade')
   .pipe(jade())
   .pipe(gulp.dest('/'));
-  
+
 });
 
 /**
@@ -69,10 +70,10 @@ gulp.task('jade', function(){
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**/*.sass', ['sass']);
+    gulp.watch('assets/_sass/**/*.sass', ['sass']);
     gulp.watch(['*.html', 'about/**/*', '_layouts/*.html', '_posts/*', 'projects/**/*', '_includes/*', 'assets/js/*.js'], ['jekyll-rebuild']);
     gulp.watch('*.jade', ['jade']);
-		
+
 });
 
 /**

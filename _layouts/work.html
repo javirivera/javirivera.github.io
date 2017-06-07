@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+    <body>
+
+    <div id="main" class="m_scene site-wrap">
+      <div class="project-wrap">
+    {% include header.html %}
+
+
+     <div id="project-panel" class="project-panel scene_element scene_element--slideup">
+     	<div class="row">
+     	<div class="col col--2-of-12 col--push-10-of-12">
+     <a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
+     	</div>
+
+
+     <div class="project-content row">
+
+     	{{ content }}
+     </div>
+
+			</div>
+    </div>
+
+    {% include footer.html %}
+  </div>
+</div>
+    </body>
+</html>

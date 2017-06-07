@@ -3,14 +3,14 @@
 	.header-center
 		.logo
 			color: white
-		
+
 	a, a:link, a:visited, a:active
 		text-decoration: none
 		border-bottom: 8px solid #00eead
 		box-shadow: inset 0 -4px 0 #00eead
 		color: white
 		background: transparent
-		+transition(all .2s ease-in)	
+		+transition(all .2s ease-in)
 		padding: 0
 
 	a:hover
@@ -18,7 +18,7 @@
 		border-bottom: 0px solid transparent
 		box-shadow: inset 0 -4px 0 transparent
 		+transition(all .2s ease-in)
-		
+
 	+box-sizing(border-box)
 	position: absolute
 	background-color: black
@@ -31,17 +31,17 @@
 		position: fixed
 		z-index: 6
 		right: 0
-	
+
 	.about-content
 		position: relative
 		width: 100%
 		max-width: 1200px
 		margin: 0 auto
 		top: 120px
-		
+
 		h1, h2, h3, h4, h5, h6, p,
 			color: white
-		
+
 .social-about
 	list-style-type: none
 	font-size: .9rem
@@ -55,7 +55,7 @@
 			box-shadow: inset 0 0px 0 #00eead
 			color: white
 			background: transparent
-			+transition(all .2s ease-in)	
+			+transition(all .2s ease-in)
 			padding: 0
 
 		a:hover
@@ -63,12 +63,3 @@
 			border-bottom: 0px solid transparent
 			box-shadow: inset 0 0px 0 transparent
 			+transition(all .2s ease-in)
-
-@media (min-width: $toast-breakpoint-medium)
-	.panel
-		.about-content
-			position: relative
-			width: 100%
-			max-width: 1200px
-			margin: 0 auto
-			top: 200px

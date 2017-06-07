@@ -2,12 +2,19 @@
 <html>
 {% include head.html %}
     <body>
- <div id="main" class="m_scene site-wrap">
+      <div id="main" class="m_scene site-wrap">
+        <div class="project-wrap">
+          {% include header.html %}
 
+            <div id="project-panel" class="content-wrap scene_element scene_element--fadein">
 
-{{ content }}
-        		
-			{% include footer.html %}
-			</div>
-    </body>
+            {{ content }}
+
+            </div>
+
+          {% include footer.html %}
+        </div>
+
+	   </div>
+   </body>
 </html>
