@@ -8,10 +8,10 @@
 
 {% include header.html %}
 
-<div id="project-panel" class="project-panel scene_element scene_element--fadein">
+<div id="project-panel" class="project-panel scene_element scene_element--slideup">
 	<div class="row">
 	<div class="col col--2-of-12 col--push-10-of-12">
-<a class="img-link" href="/"><img class="ui-exit" src="/assets/images/UI/exit.svg" alt="back"></a>
+<a class="ui-exit" href="/"></a>
 	</div>
 
 
@@ -25,15 +25,16 @@
 <div class="project-footer col col--12-of-12">
 
 
-	<div class="next-previous-project col col--1-of-2">{% if page.next_in_category != nil %}
-<a href="{{page.next_in_category.url}}" class="shift-left next-link">Older Project</a>
-{% endif %}
+	<div class="next-previous-project col col--1-of-2">
+    {% if page.next_in_category != nil %}
+    <a href="{{page.next_in_category.url}}" class="shift-left next-link"> << Previous Project</a>
+    {% endif %}
 
 	</div>
 
 <div class="next-previous-project col col--1-of-2">
 {% if page.previous_in_category != nil %}
-<a href="{{page.previous_in_category.url}}" class="shift-right previous-link">Newer Project</a>
+<a href="{{page.previous_in_category.url}}" class="shift-right previous-link">NextProject >> </a>
 {% endif %}
 </div>
 

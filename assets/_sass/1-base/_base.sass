@@ -2,7 +2,7 @@ html
 	background-color: $white
 
 body
-	font-family: Mucho-Sans, sans-serif
+	font-family: Nunito, sans-serif
 	font-size: 18px
 	font-weight: 100
 	background-color: white
@@ -41,10 +41,15 @@ h1, h2, h3, h4, h5, h6
 
 // Basic Text Style
 
-p
-	margin: 0 0 20px 0
+p, q, a, a:link a:visited, a:active, ul, li
 	color: $dark-gray
 	font-weight: normal
+
+p
+	margin: 0 0 20px 0
+
+q
+	quotes: "\201C" "\201D" "\2018" "\2019"
 
 em
 	font-style: italic
@@ -65,12 +70,11 @@ h1, h2, h3, h4, h5, h6
 
 	a, a:link a:visited, a:active
 		text-decoration: none
-		color: $dark-gray
 		background: transparent
 		+transition(all .2s ease-in)
 
 	a:hover, a:focus
-		color: #00eead
+		color: $highlight
 		+transition(all .2s ease-in)
 
 a, a:link, a:visited, a:active
@@ -80,7 +84,7 @@ a, a:link, a:visited, a:active
 	+transition(all .2s ease-in)
 
 a:hover
-	color: #00eead
+	color: $highlight
 	+transition(all .2s ease-in)
 
 a.img-link, a.img-link:link, a.img-link:visited, a.img-link:active
@@ -91,7 +95,7 @@ a.img-link, a.img-link:link, a.img-link:visited, a.img-link:active
 	+transition(all .2s ease-in)
 
 a.img-link:hover
-	color: #00eead
+	color: $highlight
 	+transition(all .2s ease-in)
 
 

@@ -1,0 +1,14 @@
+  <span class="tile-heading">
+    Recent Writing
+  </span>
+{% if post.title %}
+  <h4 class="tile-title">
+    <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+  </h4>
+{% endif %}
+
+{% if post.date %}
+  <p class="post-date">
+    {{ post.date | date: "%B %-d, %Y"}}
+  </p>
+{% endif %}

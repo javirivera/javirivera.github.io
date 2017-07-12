@@ -2,23 +2,54 @@
   position: relative
   bottom: 0
   width: 100%
+  top: 35vh
+  transform: translateY(-50%)
 
-.index-grid-content
-  position: relative
-  width: 100%
-  top: 100px
+  .cta-mail
+    border: 1px solid $highlight
+    border-radius: 36px
+    margin: 60px 20px 20px 20px
+    padding: 5px 10px
+    background-color: $highlight
+    color: $white
+
+  .cta-mail:hover
+    background-color: transparent
+    color: $highlight
+    +transition(all .4s )
 
   .index-grid-card
     position: relative
-    height: 200px
-    min-height: 200px
+    height: 100px
+    min-height: 100px
     padding: 10px
     margin-bottom: 20px
 
     .index-grid-card-content
       height: 100%
-      background-color: pink
-      border: 10px solid black
+      font-size: .75em
+      padding: 10px
+
+    .post-tags
+      font-style: italic
+      color: $gray
+
+.tile-heading
+  text-transform: uppercase
+  letter-spacing: .1em
+  font-size: .75em
+  color: $gray
+
+.tile-title
+  margin: 5px 0 0
+  a
+    color: $black
+
+
+.tile-heading
+  text-transform: uppercase
+  letter-spacing: .1em
+  font-size: .75em
 
 
 .greeting .statement

@@ -8,31 +8,27 @@ title: Javier Rivera is a designer.
   <h1 class="greeting col col--4-of-4">
     Hello!
   </h1>
-  <h2 class="greeting col col--4-of-4">
-    I'm a Designer?
-  </h2>
 
-  <span class="statement col col--2-of-4">
-  I'm a designer with a background in architecture, looking to join a collaborative team where I can help create products for people.
-  </span>
+  <p class="statement col col--2-of-4">
+    I'm a designer with a background in architecture, looking to join a collaborative team where I can help create products for people.
+  </p>
+
+  <span class="col col--4-of-4"></span>
+  <a href="mailto:javier@javirivera.com" class="cta-mail">Send Email</a>
 
 </div>
 
-<div class="index-grid-content row">
+<div class="index-grid row">
 
-<div class="col col--4-of-12 index-grid-card">
+  {% for post in site.categories['projects'] limit:2 %}
+    {% include recent-work.html %}
+  {% endfor %}
+
+<div class="col col--4-of-12 index-grid-card index-grid-card-blog">
   <div class="index-grid-card-content">
-
-  </div>
-</div>
-<div class="col col--4-of-12 index-grid-card">
-  <div class="index-grid-card-content">
-
-  </div>
-</div>
-<div class="col col--4-of-12 index-grid-card">
-  <div class="index-grid-card-content">
-
+    {% for post in site.categories['blog'] limit:1 %}
+      {% include recent-posts.html %}
+    {% endfor %}
   </div>
 </div>
 

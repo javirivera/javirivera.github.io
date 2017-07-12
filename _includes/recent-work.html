@@ -1,0 +1,24 @@
+<div class="col col--4-of-12 index-grid-card index-grid-card-work">
+  <div class="index-grid-card-content">
+    <span class="tile-heading">
+      Case Study
+    </span>
+    {% if post.title %}
+      <h4 class="tile-title">
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+      </h4>
+    {% endif %}
+
+    {% if post.tags %}
+      <p class="post-tags">
+        {{ post.tags  | sort | join: ", "  }}
+      </p>
+    {% endif %}
+
+    {% if post.description %}
+      <p class="col--2-of-3 post-description">
+        {{ post.description }}
+      </p>
+    {% endif %}
+  </div>
+</div>
