@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Factbook</title>
+	<meta name="viewport" content="width=device-width">
+	<meta content="" property="og:site_name">
+
+  <meta content="Factbook" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Fact-checking the news directly on your social media feed." property="og:description">
+
+
+  <meta content="http://javirivera.com/projects/2017/02/14/fact-book/" property="og:url">
+
+
+  <meta content="2017-02-14T00:00:00-05:00" property="article:published_time">
+  <meta content="http://javirivera.com/about/" property="article:author">
+
+
+  <meta content="/assets/images/Projects/factbook/factbook-header.png" property="og:image">
+
+
+  
+  <meta content="projects" property="article:section">
+  
+
+
+  
+  <meta content="user experience design" property="article:tag">
+  
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ *
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+
+    <body>
+ <div id="main" class="m_scene site-wrap">
+
+<div class="project-wrap">
+
+<div class="header">
+		<nav class="row nav-wrap header-center">
+			<div class="nameplate col col-1-of-3">
+				<a href="/index.html" class="name">Javier Rivera</a>
+			</div>
+			<div class="nav-right col col-1-of-3">
+				<ul class="nav-links">
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/writing/">Writing</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</nav>
+
+</div>
+
+
+<div id="project-panel" class="project-panel scene_element scene_element--slideup">
+	<div class="row">
+	<div class="col col--2-of-12 col--push-10-of-12">
+<a class="ui-exit" href="/work/"></a>
+	</div>
+
+
+<div class="project-content row">
+
+	<div class="project-page-header col col--2-of-3 col--centered">
+<img class="img-responsive" src="/assets/images/Projects/factbook/factbook-header.png" alt="factbook iphone views">
+</div>
+
+<div class="col col--2-of-3 col--push-1-of-3">
+<h1 class="project-page-title">Factbook</h1>
+
+</div>
+
+<div class="col col--2-of-3 col--push-1-of-3">
+<p class="project-page-subline">Fact-checking the news<br>directly on your social media feed.</p>
+
+</div>
+
+
+<div class="project-sub-images">
+
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/factbook/project-sub-1.png" alt="Disputed alert pop-up screen" title="Disputed alert pop-up">
+
+		</div>
+
+
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/factbook/project-sub-2.png" alt="News source pop-up screen" title="News source pop-up">
+		</div>
+
+
+		<div class="col col--1-of-3">
+		<img class="img-responsive border" src="/assets/images/Projects/factbook/project-sub-3.png
+		" alt="Truth Rating pop-up screen" title="Truth Rating pop-up">
+		</div>
+
+</div>
+
+
+<div class="project-details col col--1-of-6">
+<span class="small"><strong>Project Types</strong></span>
+<br>
+<span class="small">
+<ul>
+	<li>user experience design</li>
+</ul></span>
+<span class="small"><strong>Year</strong></span>
+<br>
+<span class="small">
+<ul>
+	<li>Winter 2017</li>
+</ul></span>
+
+</div>
+
+<div class="project-details col col--1-of-6">
+<span class="small"><strong>Created For</strong></span>
+<span class="small">
+<ul>
+	<li>General Assembly's<br>UX part-time course</li>
+</ul></span>
+</div>
+
+<div class="col col--3-of-6">
+
+<p>The rise and spread of fake news in social media has been a developing concern in recent times. The proliferation of misinformation throughout Facebook has prompted it to take action against such publications. This project aims to explore what would be a better fact-checking experience within Facebook. </p>
+
+<p>At the time this project was proposed the 2016 presidential elections had just ocurred. The posiblility of fake news influencing the election was a concern being reported on by the media. I believe this issue is one of the greatest challenges we're facing Today. When I was prompted to select an industry and a problem to research at the UX Design course at General Assembly, I chose the spread of inaccurate news on social media.</p>
+
+
+<h2>Hypothesis</h2>
+<p>After researching literature about this problem I formulated the following hypothesis: <br><br><q class="big">People have difficulty finding accurate news.</q></p>
+</div>
+
+</div>
+<div class="project-full-width">
+	<img src="/assets/images/Projects/factbook/factbook-affinity-map.png" alt="affinity map" class="img-responsive">
+</div>
+
+<div class="project-content row">
+
+<div class="col col--2-of-3">
+
+
+<h2>Ecosystem Analysis</h2>
+	<p>I studied the ecosystem of services attending news and social media as well as other services that help users fact check. I identified direct and indirect competitive services and rated their features on a scale. I found:</p>
+	<ul>
+		<li>An unattended sector on the curation and the accountability aspects on the Facebook’s and Twitter’s social platform.</li>
+		<li>Politifact’s Fact-o-meter system, while helpful as a reference, is accountabile only to themselves within their platform, no rating system exists for the public.</li>
+		<li>Adapting the experience of fact checking into Facebook instead of a third party website can help bridge the gap between accountability, curation and community.</li>
+	</ul>
+
+</div>
+
+
+<div class="col col--2-of-3">
+
+<h2>Research</h2>
+
+<p>A quick round of 7 user interviews was completed with people that mainly use social media to consume news. The goal of the interviews was to understand more about people's attitudes towards news they find on social media and how they decide what to trust.</p>
+</div>
+<div class="col col--2-of-3">
+
+<h4>People interviewed:</h4>
+<ul>
+	<li>Are skeptical of everything they read on Facebook because of the bias they’ve experienced from most sources.
+	<li>Value the convenience Facebook offers while browsing a lot of content.</li>
+	<li>Trust sources based on their history and previous familiarity with them.</li>
+	<li>Use repetition by other sources within the Facebook timeline to assess  the accuracy and legitimacy of an article.</li>
+</ul>
+
+</div>
+
+<div class="col col--2-of-3">
+
+<h2>Problem</h2>
+<p>What I learned through the interviews helped me revise my hypothesis and formulate a new more granular problem to design for. Instead of people having difficulty finding accurate news I found that:</p>
+<q class="big">People find fact-checking news on Facebook time-consuming.</q>
+
+</div>
+
+<div class="col col--2-of-3">
+<h2>Persona</h2>
+<p>Focusing my research I created one persona to design for. Meet Samantha Young, the skeptic browser.</p>
+</div>
+</div>
+<div class="project-full-width" row"">
+		<img src="/assets/images/Projects/factbook/factbook-sam.png" alt="Samantha - Persona" class="img-responsive">
+</div>
+
+<div class="project-content row">
+
+	<div class="col col--2-of-3">
+	<h2>User Flow</h2>
+	<p>With the persona, I was able to identify specific goals that allowed me to develop a desired user flow. This gave me a basic understanding of what needs had to be met by the experience. This excercise also hinted that the bulk of the experience should occur within the Facebook interface.</p>
+	</div>
+
+	<div class="col col--2-of-3">
+	<h2>Design Opportunities</h2>
+	<ul>
+		<li>Integrate solution to Facebook’s current UI.</li>
+		<li>Integrate community and friends’ Truth Rating in aggregate score.
+</li>
+		<li>Serve users source history within and outside of service.</li>
+		<li>Provide an alert when visiting disputed or known false articles.</li>
+		<li>Identify satire and other types of innacurate articles as such.</li>
+		<li>Provide related article list that includes three or more distinct 	points of view for the same story.</li>
+	</ul>
+	</div>
+
+	<div class="col col--2-of-3">
+	<h2>Prototyping</h2>
+	<p>I took some screenshots of the current mobile Facebook iPhone App and sketched several feature options over the current interface. With these sketches I created a <a href="invis.io/AYCKZQOG3">lo-fi prototype </a> on inVision. Seeing that I had a couple user tasks hinted in the sketches, it was time to put these to the test in a higher fidelity prototype.</p>
+
+	<h3>User Testing</h3>
+	<p>When I knew which user tasks I wanted to test, I created a high fidelity Facebook timeline, with dummy text and set up a prototype through inVision. Found 4 people to conduct user research with. And tested the following user tasks:</p>
+	<ul>
+		<li>Fact-check an article you want to read.</li>
+		<li>Learn more about a publisher you're fact-checking.</li>
+		<li>Find related news about an article you don't trust.</li>
+	</ul>
+	</div>
+
+	<div class="col col--1-of-2">
+		<h4>What I learned</h4>
+		<h4>Positive Feedback</h4>
+		<ul>
+			<li>Most participants found the idea of the fact-checking on Facebook service useful.</li>
+			<li>The pop-up alert on inaccurate article click-through was found useful  by most participants.</li>
+		</ul>
+		<h4>Average Problems</h4>
+		<ul>
+			<li>There are issues with the color of the icons. People think they are confusing.</li>
+<li>Accuracy Bar colors should adjust depending on the ratings instead of a gradient.</li>
+<li>People have set “personal” ways on how they navigate the timeline.</li>
+<li>Would prefer if article types (Satirical, Opinion, Interview) were  mentioned in the timeline.</li>
+<li>People would like to see more information about awards, partnerships and other information about sources.</li>
+<li>Some people don’t know what the Article Accuracy Record is referring to.</li>
+<li>People would like more information about who votes on the accuracy on the  general community, friends, and any other official journalism service. One of them mentioned Steam Reviews.</li>
+<li>Most people go straight to the article to find out if it’s accurate or not. Accuracy popup helps but they don’t notice the source validation icon easily.</li>
+<li>Finding Ratings on a five star scale would help on the source validation pop-up.</li>
+<li>Article Accuracy Ratings could be like “rotten-tomatoes” website. One rating for the general community, another rating with scores from a journalistic team.</li>
+<li>People clicked on the icons they clicked to open the popup to navigate outside instead of outside pop-up.</li>
+		</ul>
+		<h4>Severe Problems</h4>
+		<ul>
+			<li>People don’t Notice the icons immediately when they  encounter the new FB timeline.</li>
+			<li>Some people have trouble trusting the source of the application.</li>
+			<li>Identifying that there is a fact-checking tool over Facebook is difficult.</li>
+			<li>On this particular Test, having Ipsum or dummy text didn’t help the experience. People didn’t understand what they were looking at.</li>
+			<li>People were lost as soon as they got ahold of the Facebook timeline.</li>
+			<li>Facebook is a personal experience. There was barely any explanation as to why this didn't resemble a real timeline.</li>
+		</ul>
+
+	</div>
+
+	<div class="col col--1-of-2">
+	<iframe width="438" height="930" src="//invis.io/7VCL02LBS" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<div class="col col--2-of-3">
+	<h2>Insights and Next Steps</h2>
+	<p></p>
+		<ul>
+			<li>Create and test updated prototype with real content from Open Sources.</li>
+			<li>Design and test ways to intervene on the fb timeline other than icons.</li>
+			<li>Decide on the platform for the integrated experience, Chrome Extension or Facebook Native.</li>
+			<li>Integrate and test voting system (With Steam Reviews and Tomatometer precedents as inspiration)</li>
+			<li>Integrate and test related perspectives (related news) functionality.</li>
+			<li>Explore and Test ways to onboard users to the Facebook integrated experience.</li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+<div class="project-footer col col--12-of-12">
+
+
+	<div class="next-previous-project col col--1-of-2">
+    
+    <a href="/projects/2015/12/02/de-la-crema/" class="shift-left next-link"> << Previous Project</a>
+    
+
+	</div>
+
+<div class="next-previous-project col col--1-of-2">
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+     <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center scene_element">
+      		<div class="footer-menu">
+      			<span>
+
+
+
+						</span>
+      		</div>
+      	</div>
+      	</div>
+			</div>
+
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+
+</div>
+</div>
+
+    </body>
+</html>
