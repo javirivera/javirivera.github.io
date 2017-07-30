@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>blog</title>
+	<meta name="viewport" content="width=device-width">
+	<meta content="" property="og:site_name">
+
+  <meta content="blog" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="" property="og:description">
+
+
+  <meta content="http://javirivera.com/categories/blog/index.html" property="og:url">
+
+
+
+
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ *
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+
+    <body>
+      <div id="main" class="m_scene site-wrap">
+        <div class="project-wrap">
+          <div class="header">
+		<nav class="row nav-wrap header-center">
+			<div class="nameplate col col-1-of-3">
+				<a href="/index.html" class="name">Javier Rivera</a>
+			</div>
+			<div class="nav-right col col-1-of-3">
+				<ul class="nav-links">
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/writing/">Writing</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</nav>
+
+</div>
+
+
+            <div id="project-panel" class="content-wrap scene_element scene_element--fadein">
+
+            <div class="index-grid row">
+
+  <h1 class="greeting col col--4-of-4">
+    Hello!
+  </h1>
+
+  <p class="statement col col--2-of-4">
+    I'm a designer with a background in architecture, looking to join a collaborative team where I can help create products for people.
+  </p>
+  <p>
+    <a href="mailto:javier@javirivera.com" class="cta-mail">Send Email</a>
+  </p>
+</div>
+
+<div class="index-grid-card-wrap row">
+
+  
+    <div class="col col--4-of-12 index-grid-card index-grid-card-work">
+  <div class="index-grid-card-content">
+    <span class="tile-heading">
+      Case Study
+    </span>
+    
+      <h4 class="tile-title">
+        <a href="/projects/2017/02/14/fact-book/">Factbook</a>
+      </h4>
+    
+
+    
+      <p class="post-tags">
+        user experience design
+      </p>
+    
+
+    
+      <p class="col--2-of-3 post-description">
+        Fact-checking the news directly on your social media feed.
+      </p>
+    
+  </div>
+</div>
+
+  
+    <div class="col col--4-of-12 index-grid-card index-grid-card-work">
+  <div class="index-grid-card-content">
+    <span class="tile-heading">
+      Case Study
+    </span>
+    
+      <h4 class="tile-title">
+        <a href="/projects/2015/12/02/de-la-crema/">De la Crema</a>
+      </h4>
+    
+
+    
+      <p class="post-tags">
+        branding, product packaging
+      </p>
+    
+
+    
+      <p class="col--2-of-3 post-description">
+        Quality milk based products from the best of the cream.
+      </p>
+    
+  </div>
+</div>
+
+  
+
+<div class="col col--4-of-12 index-grid-card index-grid-card-blog">
+  <div class="index-grid-card-content">
+    
+        <span class="tile-heading">
+    Recent Writing
+  </span>
+
+  <h4 class="tile-title">
+    <a href="/blog/2016/04/18/The_Genius_of_the_Ikea_Pencil/">The Genius of the Ikea Pencil</a>
+  </h4>
+
+
+
+  <p class="post-date">
+    April 18, 2016
+  </p>
+
+
+    
+  </div>
+</div>
+
+</div>
+
+
+            </div>
+
+               <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center scene_element">
+      		<div class="footer-menu">
+      			<span>
+
+
+
+						</span>
+      		</div>
+      	</div>
+      	</div>
+			</div>
+
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+
+        </div>
+
+	   </div>
+   </body>
+</html>

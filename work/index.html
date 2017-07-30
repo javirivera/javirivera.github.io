@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Javier Rivera is a designer.</title>
+	<meta name="viewport" content="width=device-width">
+	<meta content="" property="og:site_name">
+
+  <meta content="Javier Rivera is a designer." property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="" property="og:description">
+
+
+  <meta content="http://javirivera.com/work/" property="og:url">
+
+
+
+
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ *
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+
+    <body>
+
+    <div id="main" class="m_scene site-wrap">
+      <div class="project-wrap">
+    <div class="header">
+		<nav class="row nav-wrap header-center">
+			<div class="nameplate col col-1-of-3">
+				<a href="/index.html" class="name">Javier Rivera</a>
+			</div>
+			<div class="nav-right col col-1-of-3">
+				<ul class="nav-links">
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/writing/">Writing</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</nav>
+
+</div>
+
+
+
+     <div id="project-panel" class="project-panel scene_element scene_element--slideup">
+     	<div class="row">
+     	<div class="col col--2-of-12 col--push-10-of-12">
+      <a class="ui-exit" href="/"></a>
+     	</div>
+
+
+     <div class="project-content row">
+
+     	<div id="work-panel" class="scene_element scene_element--fadein">
+
+    <div class="work-content col col--3-of-3">
+        <h1>Work</h1>
+        <div class="row">
+          
+            <a href="/projects/2017/02/14/fact-book/">
+              <div class="work-project-tile col col--1-of-3">
+                <div class="post-image-wrap">
+                <img class="post-image" src="/assets/images/Projects/factbook/factbook-header.png" alt="Fact-checking the news directly on your social media feed.">
+                </div>
+                
+                  <span class=" small work-tags">
+                    user experience design
+                  </span>
+                
+                  <h2 class="work-title big">Factbook</h2>
+              </div>
+            </a>
+          
+            <a href="/projects/2015/12/02/de-la-crema/">
+              <div class="work-project-tile col col--1-of-3">
+                <div class="post-image-wrap">
+                <img class="post-image" src="/assets/images/Projects/de-la-crema/logo-dlc-bg.png" alt="Quality milk based products from the best of the cream.">
+                </div>
+                
+                  <span class=" small work-tags">
+                    branding, product packaging
+                  </span>
+                
+                  <h2 class="work-title big">De la Crema</h2>
+              </div>
+            </a>
+          
+            <a href="/projects/2015/11/30/caappr-org/">
+              <div class="work-project-tile col col--1-of-3">
+                <div class="post-image-wrap">
+                <img class="post-image" src="/assets/images/Projects/caappr/Herocaappr.png" alt="Architecture &amp; landscape architecture is made for everyone.">
+                </div>
+                
+                  <span class=" small work-tags">
+                    front-end web development, web design
+                  </span>
+                
+                  <h2 class="work-title big">caappr.org</h2>
+              </div>
+            </a>
+          
+          
+          <a href="/projects/2015/11/29/enlace-informativo/">
+            <div class="work-project-tile col col--1-of-3">
+              <div class="post-image-wrap">
+              <img class="post-image" src="/assets/images/Projects/enlace-informativo/mockup.png" alt="Reviewing public documents for the benefit of the people.">
+              </div>
+              
+                <span class=" small work-tags">
+                  
+                </span>
+              
+                <h2 class="work-title big">Enlace Informativo</h2>
+            </div>
+          </a>
+          
+          <a href="/projects/2015/11/01/a-sanas/">
+            <div class="work-project-tile col col--1-of-3">
+              <div class="post-image-wrap">
+              <img class="post-image" src="/assets/images/Projects/a-sanas/asanas-card.jpg" alt="Healing through yoga, aromatherapy and guidance.">
+              </div>
+              
+                <span class=" small work-tags">
+                  branding, strategy
+                </span>
+              
+                <h2 class="work-title big">A-Sanas</h2>
+            </div>
+          </a>
+          
+        </div>
+    </div>
+</div>
+
+     </div>
+
+			</div>
+    </div>
+
+         <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center scene_element">
+      		<div class="footer-menu">
+      			<span>
+
+
+
+						</span>
+      		</div>
+      	</div>
+      	</div>
+			</div>
+
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+
+  </div>
+</div>
+    </body>
+</html>

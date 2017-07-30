@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Visualization tools and principles</title>
+	<meta name="viewport" content="width=device-width">
+	<meta content="" property="og:site_name">
+
+  <meta content="Visualization tools and principles" property="og:title">
+
+
+  <meta content="article" property="og:type">
+
+
+  <meta content="Before submerging ourselves into design principles about composition, color, typography, etc., let's explore visualization." property="og:description">
+
+
+  <meta content="http://javirivera.com/blog/2015/03/02/Visualization_tools_and_principles/" property="og:url">
+
+
+  <meta content="2015-03-02T18:00:00-05:00" property="article:published_time">
+  <meta content="http://javirivera.com/about/" property="article:author">
+
+
+
+  
+  <meta content="blog" property="article:section">
+  
+
+
+  
+
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script>
+
+/**
+ * Replace jQuery's $.fn.ready() function with a mod exec
+ *
+ * Sites that make heavy use of the $(document).ready function
+ * are generally incompatable with asynchrounous content. The
+ * the $.fn.ready function only runs once. This script replaces
+ * the ready function with a module execution controller that
+ * let's us register functions and execute all of the functions
+ * as we need them. This is useful after HTML gets injected on the
+ * page and we want to rebind functionally to the new content.
+ *
+ * @author  Miguel Ángel Pérez   reachme@miguel-perez.com
+ * @note    Should be placed directly after jQuery on the page
+ *
+ */
+;(function($){
+	var  $doc = $(document);
+
+	/** create mod exec controller */
+	$.readyFn = {
+		list: [],
+		register: function(fn) {
+			$.readyFn.list.push(fn);
+		},
+		execute: function() {
+			for (var i = 0; i < $.readyFn.list.length; i++) {
+				try {
+				   $.readyFn.list[i].apply(document, [$]);
+				}
+				catch (e) {
+					throw e;
+				}
+			};
+		}
+	};
+
+	/** run all functions */
+	$doc.ready(function(){
+		$.readyFn.execute();
+	});
+
+	/** register function */
+	$.fn.ready = function(fn) {
+		$.readyFn.register(fn);
+	};
+
+})(jQuery);
+
+
+// To re-run the ready functions just use `$.readyFn.execute();`
+// after the new HTML has been injected into the page.
+
+</script>
+</head>
+
+    <body>
+ <div id="main" class="m_scene site-wrap">
+
+
+
+<div class="project-wrap">
+
+  <div class="header">
+		<nav class="row nav-wrap header-center">
+			<div class="nameplate col col-1-of-3">
+				<a href="/index.html" class="name">Javier Rivera</a>
+			</div>
+			<div class="nav-right col col-1-of-3">
+				<ul class="nav-links">
+					<li><a href="/work/">Work</a></li>
+					<li><a href="/writing/">Writing</a></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</div>
+		</nav>
+
+</div>
+
+
+<div id="project-panel" class="project-panel scene_element scene_element--slideup">
+	<div class="row">
+    <div class="col col--2-of-12 col--push-10-of-12">
+    <a class="ui-exit" href="/writing/"></a>
+    </div>
+
+
+<div class="project-content row">
+<div class="blog-content col col--3-of-4 col--centered">
+
+	<h1>Visualization tools and principles</h1>
+
+<p><img src="/assets/images/blog/2015-03-02-Visualization_tools_and_principles/visualization-01.png" alt="Visualization"></p>
+
+<p>Before submerging ourselves into design principles about composition, color, typography, etc., let&#39;s explore visualization. When we design, there are a variety of tools that help us give meat to our thoughts. Be it sketching, high fidelity mockups, scale models or working prototypes, these are tools that help us establish a direct connection between our brain and the physical world. These serve as strategies that help us communicate our thoughts to the world. But more importantly, they help us understand and develop our ideas through the process of creating each one.</p>
+
+<!--more-->
+
+<h2>Learning to see</h2>
+
+<p>Our previous lesson taught us a little about design thinking as a way of looking at the world around us. A great ability that allows us to see the world in a fresh way is drawing. We don&#39;t even have to be as good as <a href="http://www.cuded.com/2013/02/50-mind-blowing-pencil-drawings/">these people</a>, just learn enough so you can visualize and communicate ideas.</p>
+
+<p>Visualization is the process of understanding and developing ideas through drawing. Like every other ability, to develop it you need to draw constantly. Only through practice will we start to fuse with your tools and make them an extension of your body, of your mind. This is our goal.</p>
+
+<p>We can get an introduction to effective visualization in the following video about <a href="http://www.amazon.com/gp/product/159863268X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=159863268X&linkCode=as2&tag=javrivblo-20&linkId=PJQB4NSS4LUWQIZU">Rapid Viz</a>.</p>
+
+<div class="responsive-video">
+<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}</style><div class='embed-container'><iframe src='http://www.youtube.com/embed/8wdbPBZnnK8' frameborder='0' allowfullscreen></iframe></div>
+</div>
+
+<p>This type of visualization technique will help us express ideas in a simple and communicative way. As designers we need to process our ideas through simple, quick drawings. Sketching cultivates a special connection between our brains and our tools, making them part of our beings, like our language. We could grab a workbook or two about drawing and sketch to train our hand to brain connection.</p>
+
+<h2>The blank page</h2>
+
+<p>There is one terrorizing thing about drawing, a thing that we all must get past, the blank page. We&#39;ve all been there, new sketchbook or drawing pad and we&#39;re afraid to &quot;trash it&quot; with our inexperienced scribbles and doodles. Well guess what, it will get trashed eventually if you don&#39;t use it. Fortunately we&#39;re not alone, I&#39;ve learnt a couple of strategies to get through The Fear.</p>
+
+<p><img src="/assets/images/blog/2015-03-02-Visualization_tools_and_principles/paper.png" alt="The Blank Page"></p>
+
+<p>For nifty new <a href="http://www.amazon.com/gp/product/8883701151/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=8883701151&linkCode=as2&tag=javrivblo-20&linkId=SRMEQI64QTIGS7KC">sketchbooks</a> or <a href="http://www.amazon.com/gp/product/B00BQ4YFLE/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00BQ4YFLE&linkCode=as2&tag=javrivblo-20&linkId=GT3FB3TQCKKO5G5M">drawing pads</a>, our fear might reside on that first page behind the cover, so skip 2 leafs and start sketching and writing on the third. This way we can revisit these pages when we&#39;re less afraid of them. Another way is just to trash these first pages on purpose with markers or big confident strokes without any shape. It&#39;s like getting back at them for being so intimidating, it&#39;s a liberating feeling.</p>
+
+<p>Also, instead of purchasing <a href="http://www.amazon.com/gp/product/B0084DY0G0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0084DY0G0&linkCode=as2&tag=javrivblo-20&linkId=MHVLFE6SZ7YUQAMM">really expensive</a> sketching paper, just get a ream of tabloid sized <a href="http://www.amazon.com/gp/product/B00006L383/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00006L383&linkCode=as2&tag=javrivblo-20&linkId=NMCT4JX745ADMEPD">office paper</a>, 11&quot; by 17&quot;. Get the very inexpensive kind, and start sketching. We should spend our money on a set of <a href="http://www.amazon.com/gp/product/B0007YLFC6/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0007YLFC6&linkCode=as2&tag=javrivblo-20&linkId=47B2XXTMKHOD5YZB">Prismacolor markers</a>, a <a href="http://www.amazon.com/gp/product/B001OUVQD0/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B001OUVQD0&linkCode=as2&tag=javrivblo-20&linkId=ZT24YZQRIVCC45LX">pencil set</a>, and a <a href="http://www.amazon.com/gp/product/B0008G8G8Y/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B0008G8G8Y&linkCode=as2&tag=javrivblo-20&linkId=2MLAKRXY3YVFS5N3">pen set</a>. Using quality instruments for sketching will let us master techniques effectively without worrying about substandard performance on behalf of cheap tools.</p>
+
+<p>With paper, we want the cheapest possible, in fact a ream or roll of newsprint paper will do the job well. It feels a lot better to spend material when we have a large block of cheap spare sheets right beside you instead of messing up expensive high tier paper. The bigger the sheet, the more space we have for big confident strokes and will leave space for details later on. With time our strokes will begin to be more precise.</p>
+
+<p>That&#39;s it for now, read my references below for more resources on visualization and drawing tools.</p>
+
+<p>Speaking of tools, I want to know: How do you use visualization for your designs? Also, how do you get past the fear of the blank page? Let me know in the comments section below.</p>
+
+<blockquote>
+<blockquote>
+<h3>Next post: <a href="http://www.javirivera.comgraphic/design/education/Basic_Elements_of_Design-Dimensions/">Next post: Design Principles: Composition</a></h3>
+</blockquote>
+</blockquote>
+
+<p>To keep informed about new content, you can <a href="http://eepurl.com/9xdEz">subscribe</a> to receive a nifty e-mail notification whenever I upload a new article. You could also share my blog if you think it&#39;s worth a space on your social media profiles. Until next time, and as always, thanks for reading!</p>
+
+<h3>Linked Bibliography</h3>
+
+<p>Book: <a href="http://www.amazon.com/gp/product/159863268X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=159863268X&linkCode=as2&tag=javrivblo-20&linkId=3WVZNE47E3B7GQTE">Hanks, Kurt, and Larry Belliston. Rapid Viz: A New Method for the Rapid Visualitzation of Ideas. 3rd ed. Boston, Mass.: Thomson Course Technology PTR, 2006.</a><img class="amazon-image" src="http://ir-na.amazon-adsystem.com/e/ir?t=javrivblo-20&l=as2&o=1&a=159863268X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>Book: <a href="http://www.amazon.com/gp/product/0738212415/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0738212415&linkCode=as2&tag=javrivblo-20&linkId=FH6ASEDLBBIJKWMQ">Kistler, Mark. You Can Draw in 30 Days: The Fun, Easy Way to Learn to Draw in One Month or Less. Cambridge, MA: Da Capo Press, 2011.</a><img class="amazon-image" src="http://ir-na.amazon-adsystem.com/e/ir?t=javrivblo-20&l=as2&o=1&a=0738212415" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" /></p>
+
+<p>YouTube Channel: <a href="https://www.youtube.com/user/rapidvizuals/videos?shelf_id=0&view=0&sort=dd">Rapid Viz with Kurt Hanks</a></p>
+
+
+<h3>Comments:</h3>
+
+  <div id="disqus_thread" class="col col--4-of-4"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//javiriverablog.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+</div>
+
+
+<div class="project-footer col col--12-of-12">
+
+
+	<div class="next-previous-project col col--1-of-2">
+<a href="/blog/2015/02/15/Design_literacy_&_developing_design_thinking_skills/" class="shift-left next-link"> << Older Post</a>
+
+
+	</div>
+
+<div class="next-previous-project col col--1-of-2">
+
+<a href="/blog/2015/04/27/Basic_Elements_of_Design-Dimensions/" class="shift-right previous-link">Newer Post >> </a>
+
+</div>
+
+
+</div>
+
+</div>
+</div>
+     <!--FOOTER-->
+      <div class="footer">
+      	<div class="footer-center scene_element">
+      		<div class="footer-menu">
+      			<span>
+
+
+
+						</span>
+      		</div>
+      	</div>
+      	</div>
+			</div>
+
+			<script src="/assets/js/jquery.smoothState.min.js"></script>
+			<script src="/assets/js/functions.js"></script>
+
+</div>
+</div>
+
+    </body>
+</html>
