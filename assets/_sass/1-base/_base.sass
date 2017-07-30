@@ -6,20 +6,21 @@ body
 	font-size: 18px
 	font-weight: 100
 	background-color: white
-
+	
 //	Headings
 
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6
 	color: $black
+	font-weight: bold
 
 .gigantic
-	font-size: $gigantic
+	font-size: $huge
 	line-height: 1.09
 	letter-spacing: -2px
 
 .huge, h1
-	font-size: $huge
+	font-size: $huge/1.5
 	line-height: 1.05
 
 .large, h2
@@ -55,7 +56,7 @@ em
 	font-style: italic
 
 strong
-	font-weight: black
+	font-weight: bold
 
 hr
 	border: solid #ddd
@@ -111,3 +112,122 @@ a.img-link:hover
 	margin: 0 auto
 	width: 80%
 	margin: 0 auto
+
+//Tablet
+
+//Desktop
+@media (min-width: $toast-breakpoint-medium)
+	html
+		background-color: $white
+
+	body
+		font-family: Nunito, sans-serif
+		font-size: 18px
+		font-weight: 100
+		background-color: white
+
+	//	Headings
+
+	.gigantic, .huge, .large, .bigger, .big,
+	h1, h2, h3, h4, h5, h6
+		color: $black
+		font-weight: bold
+
+	.gigantic
+		font-size: $gigantic
+		line-height: 1.09
+		letter-spacing: -2px
+
+	.huge, h1
+		font-size: $huge
+		line-height: 1.05
+
+	.large, h2
+		font-size: $large
+		line-height: 1.14
+
+	.bigger, h3
+		font-size: $bigger
+		line-height: 1.38
+
+	.big, h4
+		font-size: $big
+		line-height: 1.38
+
+	.small, small
+		font-size: $small
+		line-height: 1.2
+
+
+	// Basic Text Style
+
+	p, q, a, a:link a:visited, a:active, ul, li
+		color: $dark-gray
+		font-weight: normal
+
+	p
+		margin: 0 0 20px 0
+
+	q
+		quotes: "\201C" "\201D" "\2018" "\2019"
+
+	em
+		font-style: italic
+
+	strong
+		font-weight: bold
+
+	hr
+		border: solid #ddd
+		border-width: 1px 0 0
+		clear: both
+		margin: 10px 0 30px
+		height: 0
+
+	// Basic Links
+	.gigantic, .huge, .large, .bigger, .big,
+	h1, h2, h3, h4, h5, h6
+
+		a, a:link a:visited, a:active
+			text-decoration: none
+			background: transparent
+			+transition(all .2s ease-in)
+
+		a:hover, a:focus
+			color: $highlight
+			+transition(all .2s ease-in)
+
+	a, a:link, a:visited, a:active
+		text-decoration: none
+		color: #555
+		background: transparent
+		+transition(all .2s ease-in)
+
+	a:hover
+		color: $highlight
+		+transition(all .2s ease-in)
+
+	a.img-link, a.img-link:link, a.img-link:visited, a.img-link:active
+		color: black
+		text-decoration: none
+		color: #555
+		background: transparent
+		+transition(all .2s ease-in)
+
+	a.img-link:hover
+		color: $highlight
+		+transition(all .2s ease-in)
+
+
+	.img-responsive
+		width: 100%
+		height: auto
+
+	.border
+		+box-sizing(border-box)
+		border: 10px solid black
+
+	.content-wrap
+		margin: 0 auto
+		width: 80%
+		margin: 0 auto

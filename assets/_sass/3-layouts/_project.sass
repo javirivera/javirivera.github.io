@@ -12,7 +12,7 @@
 .project-panel
 	+box-sizing(border-box)
 	position: relative
-	border: 15px solid black
+	border: 0px solid black
 	border-top: 15px solid black
 	background-color: white
 	width: 100%
@@ -24,8 +24,9 @@
 
 
 .project-content
-	width: 80%
+	width: 90%
 	margin: 0 auto
+	margin-left: -5px
 
 .project-full-width
 	padding-left: 20px
@@ -33,9 +34,8 @@
 .ui-exit
 	position: absolute
 	right: 0
-	padding: 60px
-	width: 20px
-	$size: 60px
+	padding: 30px
+	$size: 30px
 	height: $size
 	width: $size
 	box-sizing: border-box
@@ -44,8 +44,8 @@
 	background-color: #000
 
 	&:before, &:after
-    $width: 60px
-    $height: 15px
+    $width: 30px
+    $height: 10px
     transform: rotate(-45deg)
     content: ''
     position: absolute
@@ -104,15 +104,19 @@
 
 .project-sub-images, .project-row
 	padding: 60px 0
+	width: 100%
+	margin: 0 auto
+	padding-left: 10px
 
 	div
-		height: 200px
+		max-height: 500px
 		overflow: hidden
 		padding: 0
 
 		img
-			height: 200px
-			width: auto
+			max-height: 500px
+			width: 100%
+			margin: 0 auto
 
 .project-details
 	margin: 0
@@ -172,15 +176,32 @@ body
 //Desktop
 @media (min-width: $toast-breakpoint-medium)
 	.project-panel
-		margin: 140px auto
+		margin: 0 auto
 		border: 30px solid black
 		width: 90%
 
 	.project-wrap
 		border: 30px solid black
 
+	.project-content
+		margin: 0 auto
+		width: 80%
+
 	.ui-exit
-		width: 60px
+		padding: 60px
+		$size: 60px
+		height: $size
+		width: $size
+		line-height: $size
+
+		&:before, &:after
+	    $width: 60px
+	    $height: 15px
+	    margin-top: -$height/2
+	    margin-left: -$width/2
+	    height: $height
+	    width: $width
+
 
 	.project-page-header
 		padding: 60px 20px
@@ -189,3 +210,16 @@ body
 		position: relative
 		top: 50%
 		font-size: $big
+
+	.project-sub-images, .project-row
+		padding: 60px 0
+
+		div
+			max-height: 200px
+			overflow: hidden
+			padding: 0
+
+			img
+				max-height: 200px
+				width: auto
+				margin: 0 auto

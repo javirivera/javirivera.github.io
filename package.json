@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/javirivera/javirivera.github.io/issues"
   },
-  "homepage": "https://github.com/javirivera/javirivera.github.io#readme"
+  "homepage": "https://github.com/javirivera/javirivera.github.io#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.12"
+  }
 }

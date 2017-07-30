@@ -12,13 +12,12 @@ title: Javier Rivera is a designer.
   <p class="statement col col--2-of-4">
     I'm a designer with a background in architecture, looking to join a collaborative team where I can help create products for people.
   </p>
-
-  <span class="col col--4-of-4"></span>
-  <a href="mailto:javier@javirivera.com" class="cta-mail">Send Email</a>
-
+  <p>
+    <a href="mailto:javier@javirivera.com" class="cta-mail">Send Email</a>
+  </p>
 </div>
 
-<div class="index-grid row">
+<div class="index-grid-card-wrap row">
 
   {% for post in site.categories['projects'] limit:2 %}
     {% include recent-work.html %}
