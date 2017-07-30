@@ -3129,6 +3129,19 @@ a.img-link:hover {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in; }
 
+p a, p a:link, p a:visited, p a:active {
+  text-decoration: none;
+  color: #17C69B;
+  background: transparent;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+
+p a:hover {
+  color: #17C69B;
+  text-decoration: underline;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+
 .img-responsive {
   width: 100%;
   height: auto; }
