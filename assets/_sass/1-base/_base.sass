@@ -6,7 +6,7 @@ body
 	font-size: 18px
 	font-weight: 100
 	background-color: white
-	
+
 //	Headings
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -98,6 +98,18 @@ a.img-link, a.img-link:link, a.img-link:visited, a.img-link:active
 a.img-link:hover
 	color: $highlight
 	+transition(all .2s ease-in)
+
+p
+	a, a:link, a:visited, a:active
+		text-decoration: none
+		color: $highlight
+		background: transparent
+		+transition(all .2s ease-in)
+
+	a:hover
+		color: $highlight
+		text-decoration: underline
+		+transition(all .2s ease-in)
 
 
 .img-responsive
