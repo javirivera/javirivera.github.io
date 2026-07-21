@@ -1,0 +1,24 @@
+---
+import PanelLayout from '../../layouts/PanelLayout.astro';
+import { getSortedPosts } from '../../lib/blog';
+
+const posts = await getSortedPosts();
+---
+<PanelLayout title="Javier Rivera is a designer that writes." exitHref="/">
+  <div id="blog-panel" class="scene_element scene_element--fadein">
+    <div class="blog-content col col--3-of-4">
+      <h1>Articles</h1>
+
+      {
+        posts.map((post) => (
+          <>
+            <h3>{post.title}</h3>
+            <p>{post.description}</p>
+            <a href={post.url}>Read more...</a>
+            <hr />
+          </>
+        ))
+      }
+    </div>
+  </div>
+</PanelLayout>

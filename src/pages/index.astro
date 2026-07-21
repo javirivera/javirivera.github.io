@@ -1,0 +1,43 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import { projects } from '../lib/projects';
+import { getSortedPosts } from '../lib/blog';
+import { formatLongDate } from '../lib/date';
+
+const recentProjects = projects.slice(0, 2);
+const recentPost = (await getSortedPosts())[0];
+---
+<DefaultLayout title="Javier Rivera is a designer.">
+  <div class="index-grid row">
+    <h1 class="greeting col col--4-of-4">Hello!</h1>
+
+    <p class="statement col col--2-of-4">
+      I'm a designer with a background in architecture, looking to join a
+      collaborative team where I can help create products for people.
+    </p>
+    <p>
+      <a href="mailto:javier@javirivera.com" class="cta-mail">Send Email</a>
+    </p>
+  </div>
+
+  <div class="index-grid-card-wrap row">
+    {recentProjects.map((project) => <ProjectCard project={project} />)}
+
+    <div class="col col--4-of-12 index-grid-card index-grid-card-blog">
+      <div class="index-grid-card-content">
+        {
+          recentPost && (
+            <>
+              <span class="tile-heading">Recent Writing</span>
+              <h4 class="tile-title">
+                <a href={recentPost.url}>{recentPost.title}</a>
+              </h4>
+              <p class="post-date">{formatLongDate(recentPost.date)}</p>
+            </>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

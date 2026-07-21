@@ -1,0 +1,33 @@
+.home-wrap
+	+box-sizing(border-box)
+	position: absolute
+	border: 15px solid black
+	background-color: white
+	color: white
+	width: 100%
+	z-index: 1
+	overflow: hidden
+
+
+.greeting
+	font-size: $huge
+
+// //Tablet
+// @media (max-width: $toast-breakpoint-small)
+
+
+//Desktop
+@media (min-width: $toast-breakpoint-medium)
+
+	.home-wrap
+		+box-sizing(border-box)
+		position: fixed
+		border: 30px solid black
+		height: 100vh
+		background-color: white
+		width: 100%
+		z-index: 2
+		overflow: hidden
+
+	.greeting
+		font-size: $gigantic

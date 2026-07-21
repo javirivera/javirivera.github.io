@@ -1,0 +1,16 @@
+---
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base {...Astro.props}>
+  <div id="main" class="m_scene site-wrap">
+    <div class="project-wrap">
+      <Header />
+      <div id="project-panel" class="content-wrap scene_element scene_element--fadein">
+        <slot />
+      </div>
+      <Footer />
+    </div>
+  </div>
+</Base>

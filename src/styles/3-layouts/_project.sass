@@ -1,0 +1,225 @@
+.project-wrap
+	+box-sizing(border-box)
+	position: absolute
+	border: 15px solid black
+	height: 100vh
+	background-color: transparent
+	width: 100%
+	z-index: 1
+	overflow-y: scroll
+	-webkit-overflow-scrolling: touch
+
+.project-panel
+	+box-sizing(border-box)
+	position: relative
+	border: 0px solid black
+	border-top: 15px solid black
+	background-color: white
+	width: 100%
+	max-width: 1200px
+	left: 0
+	right: 0
+	z-index: 5
+	margin: 0 auto
+
+
+.project-content
+	width: 90%
+	margin: 0 auto
+	margin-left: -5px
+
+.project-full-width
+	padding-left: 20px
+
+.ui-exit
+	position: absolute
+	right: 0
+	padding: 30px
+	$size: 30px
+	height: $size
+	width: $size
+	box-sizing: border-box
+	line-height: $size
+	display: inline-block
+	background-color: #000
+
+	&:before, &:after
+		$width: 30px
+		$height: 10px
+		transform: rotate(-45deg)
+		content: ''
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -$height/2
+		margin-left: -$width/2
+		display: block
+		height: $height
+		width: $width
+		background-color: #000
+		transition: all 0.25s ease-out
+
+	&:after
+		transform: rotate(-135deg)
+
+	&:hover
+
+		&:before, &:after
+			transform: rotate(0deg)
+
+.project-footer
+	position: relative
+	height: 200px
+	background-color: black
+	z-index: 4
+	color: white
+
+.next-previous-project
+	position: relative
+	top: 50%
+	font-size: $normal
+
+	a, a:hover, a:active, a:visited
+		color: white
+		text-decoration: none
+		border-bottom: 0px solid $highlight
+		box-shadow: inset 0 0px 0 $highlight
+
+.project-content
+	padding: 20px
+
+.project-page-header
+	padding: 20px
+
+.project-page-title
+	padding: 0
+	margin: 0
+
+.project-page-subline
+	font-size: $big
+	font-weight: 500
+	color: grey
+	padding: 0
+	margin: 0
+
+.project-sub-images, .project-row
+	padding: 60px 0
+	width: 100%
+	margin: 0 auto
+	padding-left: 10px
+
+	div
+		max-height: 500px
+		overflow: hidden
+		padding: 0
+
+		img
+			max-height: 500px
+			width: 100%
+			margin: 0 auto
+
+.project-details
+	margin: 0
+
+	ul
+		li
+			list-style: none
+		margin: 0
+		padding: 0
+
+.shift-right
+	position: absolute
+	right: 120px
+
+.shift-left
+	position: absolute
+	left: 120px
+
+.grid-img
+	padding-bottom: 20px
+
+.m_scene
+
+	.scene_element
+		animation-duration: .5s
+		transition-timing-function: ease-in
+		animation-fill-mode: both
+
+	.scene_element--fadein
+		animation-name: fadeIn
+
+	.scene_element--fadeinup
+		animation-name: zoomInUp
+
+	.scene_element--fadeinright
+		animation-name: fadeInRight
+
+	.scene_element--slidedown
+		animation-name: fadeInDownBig
+
+	.scene_element--slideup
+		animation-name: fadeInUpBig
+
+	&.is-exiting
+		.scene_element
+			animation-direction: alternate-reverse
+
+body
+	animation-duration: 2s
+	transition-timing-function: ease-in
+	animation-name: fadeIn
+
+// Tablet
+// @media (max-width: $toast-breakpoint-medium)
+
+
+//Desktop
+@media (min-width: $toast-breakpoint-medium)
+	.project-panel
+		margin: 0 auto
+		border: 30px solid black
+		width: 90%
+
+	.project-wrap
+		border: 30px solid black
+
+	.project-content
+		margin: 0 auto
+		width: 80%
+
+	.ui-exit
+		padding: 60px
+		$size: 60px
+		height: $size
+		width: $size
+		line-height: $size
+
+		&:before, &:after
+			$width: 60px
+			$height: 15px
+			margin-top: -$height/2
+			margin-left: -$width/2
+			height: $height
+			width: $width
+
+
+	.project-page-header
+		padding: 60px 20px
+
+	.next-previous-project
+		position: relative
+		top: 50%
+		font-size: $big
+
+	.project-sub-images, .project-row
+		padding: 60px 0
+
+		div
+			max-height: 200px
+			overflow: hidden
+			padding: 0
+
+			img
+				max-height: 200px
+				width: auto
+				margin: 0 auto

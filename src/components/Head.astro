@@ -1,0 +1,52 @@
+---
+import { ClientRouter } from 'astro:transitions';
+
+const SITE_TITLE = 'Javier Rivera is a Designer';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  date?: Date;
+  tags?: string[];
+  categories?: string[];
+}
+
+const {
+  title,
+  description,
+  image,
+  type = 'website',
+  date,
+  tags = [],
+  categories = [],
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>{title ?? SITE_TITLE}</title>
+  <meta name="viewport" content="width=device-width" />
+  <meta content={SITE_TITLE} property="og:site_name" />
+  <meta content={title ?? SITE_TITLE} property="og:title" />
+  <meta content={type} property="og:type" />
+  {description && <meta content={description} property="og:description" />}
+  <meta content={canonicalURL.href} property="og:url" />
+  {
+    date && (
+      <>
+        <meta content={date.toISOString()} property="article:published_time" />
+        <meta content={new URL('/about/', Astro.site).href} property="article:author" />
+      </>
+    )
+  }
+  {image && <meta content={image} property="og:image" />}
+  {categories[0] && <meta content={categories[0]} property="article:section" />}
+  {tags.map((tag) => <meta content={tag} property="article:tag" />)}
+  <link rel="icon" href="/favicon.ico" />
+  <ClientRouter />
+</head>
