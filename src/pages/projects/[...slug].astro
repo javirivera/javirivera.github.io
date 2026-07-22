@@ -1,0 +1,37 @@
+---
+import ProjectLayout from '../../layouts/ProjectLayout.astro';
+import { projects } from '../../lib/projects';
+import { parseDatedSlug } from '../../lib/urls';
+
+export function getStaticPaths() {
+  // `projects` is sorted newest-first, mirroring the within-category order used
+  // by the old navigation.rb plugin.
+  return projects.map((project, i) => {
+    const { year, month, day, slug } = parseDatedSlug(project.id);
+    const newer = projects[i - 1];
+    const older = projects[i + 1];
+    return {
+      params: { slug: `${year}/${month}/${day}/${slug}` },
+      props: {
+        project,
+        newer: newer ? { url: newer.url, title: newer.title } : undefined,
+        older: older ? { url: older.url, title: older.title } : undefined,
+      },
+    };
+  });
+}
+
+const { project, older, newer } = Astro.props;
+---
+<ProjectLayout
+  title={project.title}
+  description={project.description}
+  image={project.image}
+  type="article"
+  tags={project.tags}
+  categories={['projects']}
+  older={older}
+  newer={newer}
+>
+  <Fragment set:html={project.body} />
+</ProjectLayout>

@@ -1,0 +1,28 @@
+---
+import type { Project } from '../lib/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+const tags = project.tags.slice().sort().join(', ');
+---
+<div class="col col--4-of-12 index-grid-card index-grid-card-work">
+  <div class="index-grid-card-content">
+    <span class="tile-heading"> Case Study </span>
+    {
+      project.title && (
+        <h4 class="tile-title">
+          <a href={project.url}>{project.title}</a>
+        </h4>
+      )
+    }
+    {project.tags.length > 0 && <p class="post-tags">{tags}</p>}
+    {
+      project.description && (
+        <p class="col--2-of-3 post-description">{project.description}</p>
+      )
+    }
+  </div>
+</div>

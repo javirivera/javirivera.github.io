@@ -1,0 +1,38 @@
+---
+import { render } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+import { getSortedPosts } from '../../lib/blog';
+import { parseDatedSlug } from '../../lib/urls';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  return posts.map((post, i) => {
+    const { year, month, day, slug } = parseDatedSlug(post.entry.id);
+    const newer = posts[i - 1];
+    const older = posts[i + 1];
+    return {
+      params: { slug: `${year}/${month}/${day}/${slug}` },
+      props: {
+        entry: post.entry,
+        newer: newer ? { url: newer.url, title: newer.title } : undefined,
+        older: older ? { url: older.url, title: older.title } : undefined,
+      },
+    };
+  });
+}
+
+const { entry, older, newer } = Astro.props;
+const { Content } = await render(entry);
+---
+<PostLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  image={entry.data.image}
+  type="article"
+  date={entry.data.date}
+  categories={['blog']}
+  older={older}
+  newer={newer}
+>
+  <Content />
+</PostLayout>

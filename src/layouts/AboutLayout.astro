@@ -1,0 +1,19 @@
+---
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<Base {...Astro.props}>
+  <div id="main" class="m_scene about-wrap">
+    <div class="project-wrap">
+      <Header />
+    </div>
+    <div id="about-panel" class="panel scene_element scene_element--slidedown">
+      <div class="about-head">
+        <a class="ui-exit" href="javascript:history.back()"></a>
+      </div>
+      <slot />
+    </div>
+    <Footer />
+  </div>
+</Base>

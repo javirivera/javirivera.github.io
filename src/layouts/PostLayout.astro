@@ -1,0 +1,53 @@
+---
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Disqus from '../components/Disqus.astro';
+
+interface NavLink {
+  url: string;
+  title: string;
+}
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  date?: Date;
+  tags?: string[];
+  categories?: string[];
+  older?: NavLink;
+  newer?: NavLink;
+}
+
+const { older, newer } = Astro.props;
+---
+<Base {...Astro.props}>
+  <div id="main" class="m_scene site-wrap">
+    <div class="project-wrap">
+      <Header />
+      <div id="project-panel" class="project-panel scene_element scene_element--slideup">
+        <div class="row">
+          <div class="col col--2-of-12 col--push-10-of-12">
+            <a class="ui-exit" href="/writing/"></a>
+          </div>
+          <div class="project-content row">
+            <div class="blog-content col col--3-of-4 col--centered">
+              <slot />
+              <Disqus />
+            </div>
+          </div>
+          <div class="project-footer col col--12-of-12">
+            <div class="next-previous-project col col--1-of-2">
+              {older && <a href={older.url} class="shift-left next-link"> &lt;&lt; Older Post</a>}
+            </div>
+            <div class="next-previous-project col col--1-of-2">
+              {newer && <a href={newer.url} class="shift-right previous-link">Newer Post &gt;&gt; </a>}
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  </div>
+</Base>

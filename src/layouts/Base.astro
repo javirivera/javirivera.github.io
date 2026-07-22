@@ -1,0 +1,21 @@
+---
+import Head from '../components/Head.astro';
+import '../styles/main.sass';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  date?: Date;
+  tags?: string[];
+  categories?: string[];
+}
+---
+<!DOCTYPE html>
+<html>
+  <Head {...Astro.props} />
+  <body>
+    <slot />
+  </body>
+</html>

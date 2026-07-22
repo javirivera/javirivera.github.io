@@ -1,0 +1,33 @@
+---
+import Base from './Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  exitHref?: string;
+}
+
+const { exitHref = '/' } = Astro.props;
+---
+<Base {...Astro.props}>
+  <div id="main" class="m_scene site-wrap">
+    <div class="project-wrap">
+      <Header />
+      <div id="project-panel" class="project-panel scene_element scene_element--slideup">
+        <div class="row">
+          <div class="col col--2-of-12 col--push-10-of-12">
+            <a class="ui-exit" href={exitHref}></a>
+          </div>
+          <div class="project-content row">
+            <slot />
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </div>
+  </div>
+</Base>
